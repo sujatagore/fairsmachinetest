@@ -1,0 +1,24 @@
+
+
+
+<div class="card mb-3" (click)="onFairCard()">
+    <div class="card-body">
+        <h4>
+            {{getFair.fairName| uppercase}}
+        </h4>
+
+        <div class="content">
+            <p class="mb-0">
+                Event Type : {{getFair.type}}
+            </p>
+
+            <p class="mb-0">
+                Start Date : {{getFair.startDate | date : 'full'}}
+            </p>
+
+            <p class="mb-0">
+                End Date : {{getFair.endDate | date : 'full'}}
+            </p>
+        </div>
+    </div>
+</div>

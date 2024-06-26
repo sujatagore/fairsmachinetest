@@ -1,0 +1,34 @@
+
+<div class="fairdetail mb-3">
+    <div class="banner mb-3">
+        <img [src]="getSelectedFair.bannerUrl" 
+            [alt]="getSelectedFair.fairName"
+            [title]="getSelectedFair.fairName">
+
+        <div class="contentDetail">
+            <h4>
+                {{getSelectedFair.fairName | uppercase}}
+            </h4>
+
+            <p class="mb-0">
+                Event Type : {{getSelectedFair.type}}
+            </p>
+
+            <p class="mb-0">
+                Start Date : {{getSelectedFair.startDate | date}}
+            </p>
+
+            <p class="mb-0">
+                End Date : {{getSelectedFair.endDate | date}}
+            </p>
+        </div>
+    </div>
+
+    <p *ngIf="getSelectedFair.candidateDescription" [innerHTML]="getSelectedFair.candidateDescription">
+
+    </p>
+
+    <p *ngIf="getSelectedFair.schoolDescription" [innerHTML]="getSelectedFair.schoolDescription">
+
+    </p>
+</div>
